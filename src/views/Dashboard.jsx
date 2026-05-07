@@ -53,7 +53,8 @@ export default function Dashboard() {
             WebkitBackgroundClip: 'text', 
             WebkitTextFillColor: 'transparent',
             display: 'inline-block',
-            fontSize: '4.2rem'
+            fontSize: '4.2rem',
+            textTransform: 'capitalize'
           }}>
             {user?.nombre || 'Creativx'}
           </span>!
