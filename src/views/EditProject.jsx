@@ -75,7 +75,7 @@ export default function EditProject() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.titulo || !formData.cliente_id) return;
+    if (!formData.titulo) return;
     
     const projectToUpdate = {
       ...formData,
@@ -165,8 +165,8 @@ export default function EditProject() {
                 value={formData.cliente_id}
                 onChange={handleChange}
                 style={{ width: '100%', padding: '16px', borderRadius: '16px', border: 'none', background: '#f1f5f9', fontSize: '0.95rem', color: 'var(--text-primary)', appearance: 'none', outline: 'none' }}
-                required
               >
+                <option value="">Sin cliente / Particular</option>
                 {clients.map(c => (
                   <option key={c.id} value={c.id}>{c.nombre}</option>
                 ))}

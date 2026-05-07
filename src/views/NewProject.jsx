@@ -55,7 +55,7 @@ export default function NewProject() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.titulo || !formData.cliente_id) return;
+    if (!formData.titulo) return;
     
     // Default values and conversions
     const projectToSave = {
@@ -148,9 +148,8 @@ export default function NewProject() {
                 value={formData.cliente_id}
                 onChange={handleChange}
                 style={{ width: '100%', padding: '16px', borderRadius: '16px', border: 'none', background: '#f1f5f9', fontSize: '0.95rem', color: formData.cliente_id ? 'var(--text-primary)' : 'var(--text-secondary)', appearance: 'none', outline: 'none' }}
-                required
               >
-                <option value="" disabled>Selecciona un cliente</option>
+                <option value="">Sin cliente / Particular</option>
                 {clients.map(c => (
                   <option key={c.id} value={c.id}>{c.nombre}</option>
                 ))}
