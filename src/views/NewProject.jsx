@@ -53,7 +53,7 @@ export default function NewProject() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.titulo) {
       alert("El título del proyecto es obligatorio");
