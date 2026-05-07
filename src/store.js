@@ -327,7 +327,7 @@ export const useStore = create((set, get) => ({
     set((state) => ({ 
       projects: [...state.projects, { ...project, id: newId, pagado: false }] 
     }));
-    await get().sync();
+    get().sync();
     return newId;
   },
 
