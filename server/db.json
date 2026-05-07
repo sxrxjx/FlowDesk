@@ -1,0 +1,146 @@
+{
+  "clients": [
+    {
+      "id": "1",
+      "nombre": "Alex Morgan",
+      "especialidad": "Diseño de Marca & Estrategia",
+      "telefono": "+34 600 000 000",
+      "email": "alex@studio.com",
+      "notas": "Cliente principal para la campaña de rebranding 2024.",
+      "foto": "https://i.pravatar.cc/150?u=alex",
+      "ingresos": 12500
+    },
+    {
+      "id": "2",
+      "nombre": "Julian Lopez",
+      "especialidad": "Desarrollo Web",
+      "telefono": "+34 611 111 111",
+      "email": "julian@dev.com",
+      "notas": "Mantenimiento anual del e-commerce.",
+      "foto": "https://i.pravatar.cc/150?u=julian",
+      "ingresos": 8400
+    },
+    {
+      "id": "3",
+      "nombre": "Elena Rivas",
+      "especialidad": "Marketing Digital",
+      "telefono": "+34 622 222 222",
+      "email": "elena@mkt.com",
+      "notas": "Colaboración en redes sociales.",
+      "foto": "https://i.pravatar.cc/150?u=elena",
+      "ingresos": 3200
+    },
+    {
+      "id": "4",
+      "nombre": "Marco Esparza",
+      "especialidad": "Fotografía",
+      "telefono": "+34 633 333 333",
+      "email": "marco@photo.com",
+      "notas": "Sesiones trimestrales de producto.",
+      "foto": "https://i.pravatar.cc/150?u=marco",
+      "ingresos": 5100
+    },
+    {
+      "id": "5",
+      "nombre": "Carla Mendez",
+      "especialidad": "Ilustración Editorial",
+      "telefono": "+34 644 444 444",
+      "email": "carla@art.com",
+      "notas": "Proyecto de libro infantil en curso.",
+      "foto": "https://i.pravatar.cc/150?u=carla",
+      "ingresos": 2800
+    }
+  ],
+  "projects": [
+    {
+      "id": "101",
+      "cliente_id": "1",
+      "titulo": "Rebranding Studio 2024",
+      "fecha_entrega": "2024-12-15",
+      "estado": "en-progreso",
+      "progreso": 65,
+      "urgencia": "alta"
+    },
+    {
+      "id": "102",
+      "cliente_id": "2",
+      "titulo": "E-Commerce Refresh",
+      "fecha_entrega": "2024-11-30",
+      "estado": "completado",
+      "progreso": 100,
+      "urgencia": "media"
+    },
+    {
+      "id": "103",
+      "cliente_id": "1",
+      "titulo": "Brand Guidelines",
+      "fecha_entrega": "2025-01-20",
+      "estado": "pendiente",
+      "progreso": 15,
+      "urgencia": "media"
+    },
+    {
+      "id": "104",
+      "cliente_id": "3",
+      "titulo": "Campaña Primavera 2026",
+      "fecha_entrega": "2026-05-07",
+      "estado": "en-progreso",
+      "progreso": 45,
+      "urgencia": "alta"
+    },
+    {
+      "id": "105",
+      "cliente_id": "4",
+      "titulo": "Sesión de Producto - Invierno",
+      "fecha_entrega": "2026-05-15",
+      "estado": "pendiente",
+      "progreso": 5,
+      "urgencia": "normal"
+    },
+    {
+      "id": "106",
+      "cliente_id": "5",
+      "titulo": "Portada 'El Bosque Mágico'",
+      "fecha_entrega": "2026-05-20",
+      "estado": "en-progreso",
+      "progreso": 80,
+      "urgencia": "alta"
+    }
+  ],
+  "notifications": [
+    { "id": "1", "title": "Nueva entrega", "message": "Revisión de marca para Alex Morgan mañana.", "time": "Hace 5 min", "read": false, "link": "/proyectos/101" },
+    { "id": "2", "title": "Proyecto pausado", "message": "E-Commerce Nova está esperando feedback.", "time": "Hace 2 horas", "read": false, "link": "/proyectos/103" },
+    { "id": "3", "title": "Pago recibido", "message": "Se ha confirmado el ingreso de Marco Esparza.", "time": "Ayer", "read": true, "link": "/clientes/4" },
+    { "id": "4", "title": "¡Hito alcanzado!", "message": "Has completado el 80% de la portada de Carla Mendez.", "time": "Hace 10 min", "read": false, "link": "/proyectos/106" }
+  ],
+  "weeklyWorkHours": [
+    { "day": "Lun", "hours": 6.5, "height": 65 },
+    { "day": "Mar", "hours": 8.0, "height": 80 },
+    { "day": "Mié", "hours": 4.5, "height": 45 },
+    { "day": "Jue", "hours": 9.0, "height": 90 },
+    { "day": "Vie", "hours": 5.2, "height": 52 },
+    { "day": "Sáb", "hours": 2.0, "height": 20 },
+    { "day": "Dom", "hours": 0.0, "height": 0 }
+  ],
+  "user": {
+    "nombre": "Sara E.",
+    "email": "sara@flowdesk.com",
+    "foto": "https://i.pravatar.cc/150?img=11",
+    "biografia": "Diseñadora estratégica apasionada por los sistemas visuales.",
+    "notificaciones": true,
+    "idioma": "Español"
+  },
+  "users": [
+    {
+      "email": "sara@flowdesk.com",
+      "password": "password123",
+      "nombre": "Sara E."
+    },
+    {
+      "email": "test@flowdesk.com",
+      "password": "test",
+      "nombre": "Usuario Test"
+    }
+  ],
+  "isLoggedIn": true
+}
