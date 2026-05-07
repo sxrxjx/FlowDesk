@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, NavLink, useLocation, useNavigate, Navigate } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import { Home, LayoutDashboard, Users, FolderKanban, Settings, Bell, ChevronLeft, Plus, User } from 'lucide-react';
 import { useStore } from './store';
@@ -170,6 +170,7 @@ function App() {
           <Route path="/reportes" element={<Reports />} />
           <Route path="/registro-jornada" element={<WorkLog />} />
           <Route path="/perfil" element={<Profile />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <BottomNavigation />
       </div>
