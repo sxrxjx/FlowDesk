@@ -337,7 +337,7 @@ export const useStore = create((set, get) => ({
       String(p.id) === String(projectId) ? { ...p, ...updatedData } : p
     );
     set({ projects: updatedProjects });
-    await get().sync();
+    get().sync();
   },
 
   toggleProjectPayment: async (projectId) => {
