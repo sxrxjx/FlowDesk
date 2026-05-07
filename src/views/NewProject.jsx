@@ -70,8 +70,8 @@ export default function NewProject() {
       urgencia: 'normal'
     };
 
-    addProject(projectToSave);
-    navigate('/proyectos');
+    const newId = await addProject(projectToSave);
+    navigate(`/proyectos/${newId}`);
   };
 
   return (

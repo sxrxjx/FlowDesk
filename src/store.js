@@ -323,10 +323,12 @@ export const useStore = create((set, get) => ({
 
   // Project Actions
   addProject: async (project) => {
+    const newId = Date.now().toString();
     set((state) => ({ 
-      projects: [...state.projects, { ...project, id: Date.now().toString(), pagado: false }] 
+      projects: [...state.projects, { ...project, id: newId, pagado: false }] 
     }));
     await get().sync();
+    return newId;
   },
 
   updateProject: async (projectId, updatedData) => {
