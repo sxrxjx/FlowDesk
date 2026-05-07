@@ -241,7 +241,11 @@ export default function ProjectDetail() {
             </div>
             <div>
               <p style={{ fontSize: '0.7rem', fontWeight: 600, textTransform: 'uppercase', color: 'var(--text-secondary)', marginBottom: '2px' }}>Entrega</p>
-              <p style={{ fontWeight: 600, fontSize: '0.95rem' }}>{new Date(project.fecha_entrega).toLocaleDateString('es-ES', { month: 'short', day: '2-digit', year: 'numeric' })}</p>
+              <p style={{ fontWeight: 600, fontSize: '0.95rem' }}>
+                {project.fecha_entrega 
+                  ? new Date(project.fecha_entrega).toLocaleDateString('es-ES', { month: 'short', day: '2-digit', year: 'numeric' })
+                  : 'Sin fecha definida'}
+              </p>
             </div>
           </div>
           
