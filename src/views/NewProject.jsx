@@ -55,7 +55,10 @@ export default function NewProject() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.titulo) return;
+    if (!formData.titulo) {
+      alert("El título del proyecto es obligatorio");
+      return;
+    }
     
     // Default values and conversions
     const projectToSave = {
@@ -115,15 +118,14 @@ export default function NewProject() {
           {/* Nombre del Proyecto */}
           <div style={{ marginBottom: '20px' }}>
             <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 700, color: '#5c4848', marginBottom: '8px' }}>Nombre del Proyecto</label>
-            <input 
-              type="text" 
-              name="titulo"
-              placeholder="ej. Rediseño de Marca" 
-              value={formData.titulo}
-              onChange={handleChange}
-              style={{ width: '100%', padding: '16px', borderRadius: '16px', border: 'none', background: '#f1f5f9', fontSize: '0.95rem', color: 'var(--text-primary)', outline: 'none' }}
-              required
-            />
+              <input 
+                type="text" 
+                name="titulo"
+                placeholder="ej. Rediseño de Marca" 
+                value={formData.titulo}
+                onChange={handleChange}
+                style={{ width: '100%', padding: '16px', borderRadius: '16px', border: 'none', background: '#f1f5f9', fontSize: '0.95rem', color: 'var(--text-primary)', outline: 'none' }}
+              />
           </div>
 
           {/* Descripción Corta */}
@@ -249,7 +251,6 @@ export default function NewProject() {
                   value={formData.fecha_entrega}
                   onChange={handleChange}
                   style={{ width: '100%', padding: '14px 16px', borderRadius: '16px', border: 'none', background: '#f1f5f9', fontSize: '0.9rem', color: 'var(--text-primary)', outline: 'none' }}
-                  required
                 />
               </div>
             </div>

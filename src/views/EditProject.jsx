@@ -75,7 +75,11 @@ export default function EditProject() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.titulo) return;
+    // Only title is strictly necessary for the logic, but we'll remove HTML required to avoid hidden tooltips
+    if (!formData.titulo) {
+      alert("El título es obligatorio");
+      return;
+    }
     
     const projectToUpdate = {
       ...formData,
@@ -139,7 +143,6 @@ export default function EditProject() {
               value={formData.titulo}
               onChange={handleChange}
               style={{ width: '100%', padding: '16px', borderRadius: '16px', border: 'none', background: '#f1f5f9', fontSize: '0.95rem', color: 'var(--text-primary)', outline: 'none' }}
-              required
             />
           </div>
 
@@ -262,7 +265,6 @@ export default function EditProject() {
                 value={formData.fecha_entrega}
                 onChange={handleChange}
                 style={{ width: '100%', padding: '14px 16px', borderRadius: '16px', border: 'none', background: '#f1f5f9', fontSize: '0.9rem', color: 'var(--text-primary)', outline: 'none' }}
-                required
               />
             </div>
             <div>
